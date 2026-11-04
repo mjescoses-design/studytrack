@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyTrack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>StudyTrack</h1>
+        <p>Student Study Session Tracker</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2 id="form-title">Add Study Session</h2>
+            <form id="session-form">
+                <label>Subject <input type="text" id="subject" required></label>
+                <label>Topic <input type="text" id="topic" required></label>
+                <label>Duration (minutes) <input type="number" id="duration" min="1" required></label>
+                <label>Date <input type="date" id="date" required></label>
+                <label>Notes <textarea id="notes" rows="3"></textarea></label>
+                <div class="buttons">
+                    <button type="submit" id="submit-btn">Add Session</button>
+                    <button type="button" id="cancel-btn" hidden>Cancel</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Study Sessions</h2>
+            <div id="session-list"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

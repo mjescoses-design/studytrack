@@ -1,0 +1,71 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f8;
+    margin: 0;
+    color: #222;
+}
+
+header {
+    background: #2f4b8f;
+    color: white;
+    text-align: center;
+    padding: 24px 12px;
+}
+
+header h1 { margin: 0 0 4px; }
+header p { margin: 0; opacity: 0.85; }
+
+main {
+    max-width: 700px;
+    margin: 24px auto;
+    padding: 0 12px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background: #2f4b8f;
+    color: white;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+button:hover { opacity: 0.9; }
+button.delete { background: #c0392b; }
+button.cancel { background: #777; }
+
+.session {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+}
+
+.session:last-child { border-bottom: none; }
+.session h3 { margin: 0 0 4px; }
+.session p { margin: 2px 0; }
