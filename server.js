@@ -14,6 +14,7 @@ mongoose
     .then(() => console.log("MongoDB connected"))
     .catch((err) => console.error("MongoDB error:", err.message));
 
+app.use("/api/sessions", require("./routes/sessions"));
 app.get("/api/test", (req, res) => {
     res.json({ message: "StudyTrack API is working!" });
 });
