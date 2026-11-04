@@ -30,10 +30,33 @@ function makeEl(tag, text, className) {
     return el;
 }
 
+// Dashboard: calculate totals from the sessions list
+function updateDashboard(sessions) {
+    const totalMinutes = sessions.reduce((sum, s) => sum + s.duration, 0);
+    document.getElementById("total-sessions").textContent = sessions.length;
+    document.getElementById("total-time").textContent = formatDuration(totalMinutes);
+
+    const bySubject = {};
+    sessions.forEach((s) => {
+        bySubject[s.subject] = (bySubject[s.subject] || 0) + s.duration;
+    });
+
+    let top = "-";
+    let max = 0;
+    for (const subject in bySubject) {
+        if (bySubject[subject] > max) {
+            max = bySubject[subject];
+            top = subject;
+        }
+    }
+    document.getElementById("top-subject").textContent = top;
+}
+
 // READ: fetch all sessions and show them
 async function loadSessions() {
     const res = await fetch("/api/sessions");
     const sessions = await res.json();
+    updateDashboard(sessions);
     list.innerHTML = "";
 
     if (sessions.length === 0) {

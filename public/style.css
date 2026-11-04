@@ -69,3 +69,7 @@ button.cancel { background: #777; }
 .session:last-child { border-bottom: none; }
 .session h3 { margin: 0 0 4px; }
 .session p { margin: 2px 0; }
+.stats { display: flex; gap: 12px; flex-wrap: wrap; }
+.stat { flex: 1; min-width: 150px; background: #eef2fb; border-radius: 6px; padding: 12px; text-align: center; }
+.stat span { display: block; font-size: 1.4em; font-weight: bold; color: #2f4b8f; }
+.stat small { color: #555; }
